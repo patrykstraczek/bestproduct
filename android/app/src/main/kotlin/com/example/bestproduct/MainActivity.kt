@@ -1,4 +1,4 @@
-package com.example.bestproduct
+package com.patrykstraczek.bestproduct
 
 import io.flutter.embedding.android.FlutterActivity
 

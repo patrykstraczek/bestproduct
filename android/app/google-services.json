@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1043735745710",
+    "project_id": "pizza-wroclaw-2812",
+    "storage_bucket": "pizza-wroclaw-2812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043735745710:android:d3d5e115da1a84ce9d893f",
+        "android_client_info": {
+          "package_name": "com.patrykstraczek.bestproduct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043735745710-71n97s7fbalcsiarl33vst8pcultpsl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ1HAhdgvUI53fVLWAhhoFcGSaKehdT9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043735745710-71n97s7fbalcsiarl33vst8pcultpsl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
