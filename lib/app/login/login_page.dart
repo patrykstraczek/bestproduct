@@ -1,15 +1,55 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({
+  LoginPage({
     Key? key,
   }) : super(key: key);
 
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Jesteś niezalogowany'),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Zaloguj się'),
+              const SizedBox(height: 20),
+              TextField(
+                controller: emailController,
+                decoration: const InputDecoration(hintText: 'E-mail'),
+              ),
+              TextField(
+                controller: passwordController,
+                decoration: const InputDecoration(hintText: 'Hasło'),
+                obscureText: true,
+              ),
+              const SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () async {
+                  try {
+                    await FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: emailController.text,
+                      password: passwordController.text,
+                    );
+                  } catch (error) {
+                    print(error);
+                  }
+                  await FirebaseAuth.instance.signInWithEmailAndPassword(
+                    email: emailController.text,
+                    password: passwordController.text,
+                  );
+                },
+                child: const Text('Zaloguj się'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
