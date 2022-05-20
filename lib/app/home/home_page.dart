@@ -1,3 +1,7 @@
+import 'package:bestproduct/app/home/add_opinion/add_opinion_page.dart';
+import 'package:bestproduct/app/home/my_account/my_account_page.dart';
+import 'package:bestproduct/app/home/restaurants/restaurants_page_content.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -19,34 +23,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Najlepsza pizza w mieście'),
+      ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return const Center(
-            child: Text('Jeden'),
-          );
+          return const RestaurantPageContent();
         }
         if (currentIndex == 1) {
-          return const Center(
-            child: Text('Dwa'),
-          );
+          return const AddOpinionPage();
         }
-        return Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Jesteś zalogowany jako ${widget.user.email}'),
-              const SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  FirebaseAuth.instance.signOut();
-                },
-                child: const Text('Wyloguj'),
-              ),
-            ],
-          ),
-        );
+        return MyAccountPage(email: widget.user.email);
       }),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
