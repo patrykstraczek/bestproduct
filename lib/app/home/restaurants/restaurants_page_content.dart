@@ -27,20 +27,25 @@ class RestaurantPageContent extends StatelessWidget {
           return ListView(
             children: [
               for (final document in documents) ...[
-                Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(document['name']),
-                          Text(document['pizza']),
-                        ],
-                      ),
-                      Text(document['rating'].toString()),
-                    ],
+                Dismissible(
+                  key: ValueKey(document.id),
+                  child: Padding(
+                    padding: const EdgeInsets.all(30.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(document['name']),
+                            Text(document['pizza']),
+                          ],
+                        ),
+                        Text(
+                          document['rating'].toString(),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
