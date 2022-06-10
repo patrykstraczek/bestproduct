@@ -1,4 +1,4 @@
-import 'package:bestproduct/app/home/restaurants/cubit/restaurants_cubit.dart';
+import 'package:bestproduct/app/features/home/restaurants/cubit/restaurants_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

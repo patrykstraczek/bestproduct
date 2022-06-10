@@ -43,7 +43,7 @@ class RestaurantsCubit extends Cubit<RestaurantsState> {
       ..onError((error) {
         emit(
           RestaurantsState(
-            documents: [],
+            documents: const [],
             isLoading: false,
             errorMessage: error.toString(),
           ),
