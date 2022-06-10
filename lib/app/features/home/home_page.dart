@@ -1,7 +1,6 @@
-import 'package:bestproduct/app/home/add_opinion/add_opinion_page.dart';
-import 'package:bestproduct/app/home/my_account/my_account_page.dart';
-import 'package:bestproduct/app/home/restaurants/restaurants_page_content.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:bestproduct/app/features/home/add_opinion/add_opinion_page.dart';
+import 'package:bestproduct/app/features/home/my_account/my_account_page.dart';
+import 'package:bestproduct/app/features/home/restaurants/restaurants_page_content.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
